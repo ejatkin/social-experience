@@ -6,10 +6,9 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+        Category.belongsToMany(Story, {through: 'StoryCategory'});
       }
     }
   });
   return Category;
 };
-
-Category.belongsToMany(Story, {through: 'StoryCategory'});

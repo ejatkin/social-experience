@@ -10,10 +10,9 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+        Story.belongsToMany(Category, {through: 'StoryCategory'});
       }
     }
   });
   return Story;
 };
-
-Story.belongsToMany(Category, {through: 'StoryCategory'});
