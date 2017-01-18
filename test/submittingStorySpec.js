@@ -5,6 +5,7 @@ var app = require('../app.js');
 const Browser = require('zombie');
 var http = require('http');
 const assert = require('assert');
+var expect = require('chai').expect
 const browser = new Browser();
 var server = null;
 
@@ -28,7 +29,7 @@ before(function(done) {
 });
 
   it('there is form with submit button for stories', function(){
-   assert.equal(browser.text('#story'), 'Share your story')
+   expect(browser.text('#story')).to.contain('Share your story');
   //  assert.equal(browser.('#submit'), 'Submit')
 });
 
@@ -61,7 +62,7 @@ before(function(done) {
   });
 
   it('should see welcome page', function() {
-    browser.assert.text('Story of my life');
+    expect(browser.text('body')).to.contain('Story of my life');
   });
 
 after(function(done) {
