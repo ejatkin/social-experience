@@ -10,6 +10,20 @@ module.exports = {
       },
       country: {
         type: Sequelize.STRING
+
+      },
+      city: {
+        type: Sequalize.STRING
+      },
+      perspective: {
+        type: Sequelize.STRING
+      },
+      content: {
+        type: Sequelize.STRING
+      },
+      title: {
+        type: Sequelize.STRING
+
       }
     });
   },
