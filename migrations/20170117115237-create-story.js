@@ -12,8 +12,13 @@ module.exports = {
         type: Sequelize.STRING
 
       },
+
+      category: {
+          type: Sequelize.STRING
+      },
+
       city: {
-        type: Sequalize.STRING
+        type: Sequelize.STRING
       },
       perspective: {
         type: Sequelize.STRING
@@ -32,6 +37,3 @@ module.exports = {
   }
 
 };
-
-};
-
