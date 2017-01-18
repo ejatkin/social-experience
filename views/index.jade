@@ -1,5 +1,20 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Social Experience
+  p Stuff that can't be found in travel guides nor Wikipedia
+  br
+  br
+  form#story(name="submit-story", method="post") Share your story
+  div.input
+    span.label Country
+    input#country(type="text", name="country")
+  div.input
+    span.label Title
+    input#title(type="text", name="title")
+  div.input
+    span.label Your Experience
+    textarea(name="Experience", cols="40", rows="5")
+
+  div.actions
+  input#submit(type="submit", value="Submit")

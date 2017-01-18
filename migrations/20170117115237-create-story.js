@@ -10,6 +10,7 @@ module.exports = {
       },
       country: {
         type: Sequelize.STRING
+
       },
       city: {
         type: Sequalize.STRING
@@ -22,10 +23,15 @@ module.exports = {
       },
       title: {
         type: Sequelize.STRING
+
       }
     });
   },
   down: function(queryInterface, Sequelize) {
     return queryInterface.dropTable('Stories');
   }
+
 };
+
+};
+
