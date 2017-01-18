@@ -29,7 +29,7 @@ before(function(done) {
 
   it('there is form with submit button for stories', function(){
    assert.equal(browser.text('#story'), 'Share your story')
-   assert.equal(browser.text('#submit'), 'Submit')
+  //  assert.equal(browser.('#submit'), 'Submit')
 });
 
 
@@ -51,7 +51,7 @@ before(function() {
   });
 
 before(function(done) {
-  browser.fill('#story', 'Story of my life').pressButton('#submit', done);
+  browser.fill('#title', 'Story of my life').pressButton('#submit', done);
 
 });
 
