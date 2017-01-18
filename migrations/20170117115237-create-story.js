@@ -10,11 +10,14 @@ module.exports = {
       },
       country: {
         type: Sequelize.STRING
-      },
-
+      }
     });
   },
   down: function(queryInterface, Sequelize) {
     return queryInterface.dropTable('Stories');
   }
+
 };
+
+};
+
