@@ -18,7 +18,7 @@ module.exports = {
       },
 
       city: {
-        type: Sequalize.STRING
+        type: Sequelize.STRING
       },
       perspective: {
         type: Sequelize.STRING
@@ -35,7 +35,5 @@ module.exports = {
   down: function(queryInterface, Sequelize) {
     return queryInterface.dropTable('Stories');
   }
-
-};
 
 };
