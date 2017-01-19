@@ -1,8 +1,39 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 a {
   color: #00B7FF;
+}
+
+#nav-explore, #nav-contribute {
+  display: inline;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+a.navitem:link, a.navitem:visited, a.navitem:hover, a.navitem:active {
+  font-size: 30px;
+  color: #006080;
+  text-decoration: none;
+}
+
+/*Forms*/
+
+.form {
+  list-style-type: none;
+  padding-top: 40px;
+}
+
+.form-item {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.form-input-field {
+  width: 250px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
 }
