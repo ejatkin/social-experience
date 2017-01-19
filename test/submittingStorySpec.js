@@ -43,12 +43,11 @@ describe('User submits form', function() {
 
 before(function() {
   server = http.createServer(app).listen(3000);
-
 });
 
-  before(function(done) {
- browser.visit('/', done);
-  });
+before(function(done) {
+  browser.visit('/', done);
+});
 
 before(function(done) {
   browser.fill('#story', 'Story of my life').pressButton('#submit', done);
