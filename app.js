@@ -4,8 +4,25 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var stories = require('./routes/stories');
+var http = require('http')
 
 var app = express();
+
+var db
+
+const MongoClient = require('mongodb').MongoClient
+
+MongoClient.connect('mongodb://socialexperience:Makers@ds117929.mlab.com:17929/social-experience', (err, database) => {
+  // ... start the server
+
+  if (err) return console.log(err)
+  db = database
+
+  app.listen(3000, () => {
+    console.log('listening on 3000')
+  });
+
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,3 +60,5 @@ http.createServer(app).listen(process.env.PORT, function(){
   console.log("Server listening on port")
 });
 }
+
+function db(){ mongo: db};
