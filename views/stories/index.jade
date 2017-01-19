@@ -1,4 +1,10 @@
 extends layout
 
 block content
-  div this is the index page to display all stories
+    each item in stories
+      li.story-country= "Country: " + item["country"]
+      li.story-category= "Category: " + item["category"]
+      li.story-perspective= "Perspective: " + item["perspective"] 
+      li.story-title= "Title: " + item["title"]
+      li.story-content= "Experience: " + item["Experience"]
+      p
