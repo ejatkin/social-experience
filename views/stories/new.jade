@@ -7,6 +7,7 @@ block content
   br
   br
   form#story(name="submit-story", method="post", action="/stories") Share your story
+
     ul.form
       li.form-item
         //- span.label Country
@@ -16,14 +17,14 @@ block content
         input#city.form-input-field(type="text", name="city", placeholder="City")
       li.form-item
         //- span.label Category
-        select#category.form-input-field
+        select#category.form-input-field(name="category")
           option(value="" disabled selected) Category
           option(value="communication") Communications styles and rules
           option(value="socialroles") Social roles
           option(value="courtship") Courtship
       li.form-item
         //- span.label Perspective
-        select#perspective.form-input-field
+        select#perspective.form-input-field(name="perspective")
           option(value="" disabled selected) Perspective
           option(value="insider") Insider
           option(value="outsider") Outsider

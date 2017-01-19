@@ -22,7 +22,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/new', function(request, result, next){
-  result.render('stories/new')
+  result.render('stories/new', { title: 'Social Experience'});
   // result.send('this is a form for new stories');
 });
 
@@ -33,11 +33,12 @@ router.get('/:id', function(request, result, next){
 
 router.post('/',function(req, res, next){
   // create story object
-  db.collection('quotes').save(req.body, (err, result) => {
+  db.collection('stories').save({ country: req.body.country, city: req.body.city, category: req.body.category, perspective: req.body.perspective, title: req.body.title, Experience: req.body.Experience}, (err, result) => {
 
     if (err) return console.log(err);
 
     console.log('saved to database');
+    console.log(result);
     res.redirect('/');
   });
 });
