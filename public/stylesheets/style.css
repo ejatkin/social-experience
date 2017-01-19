@@ -27,3 +27,19 @@ a.navitem:link, a.navitem:visited, a.navitem:hover, a.navitem:active {
 .story-title, .story-content, .story-country, .story-category, .story-perspective {
   list-style: none;
 }
+
+.form {
+  list-style-type: none;
+  padding-top: 40px;
+}
+
+.form-item {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.form-input-field {
+  width: 250px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}

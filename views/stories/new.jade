@@ -7,29 +7,33 @@ block content
   br
   br
   form#story(name="submit-story", method="post", action="/stories") Share your story
-    div.input
-      span.label Country
-      input#country(type="text", name="country")
-    div.input
-      span.label City
-      input#city(type="text", name="city")
-    div.input
-      span.label Category
-      select#category(name="category")
-        option(value="communication") Communications styles and rules
-        option(value="socialroles") Social roles
-        option(value="courtship") Courtship
-    div.input
-      span.label Perspective
-      select#perspective(name="perspective")
-        option(value="insider") Insider
-        option(value="outsider") Outsider
-    div.input
-      span.label Title
-      input#title(type="text", name="title")
-    div.input
-      span.label Your Experience
-      textarea(name="Experience", cols="40", rows="5")
 
-    div.actions
-      input#submit(type="submit", value="Submit")
+    ul.form
+      li.form-item
+        //- span.label Country
+        input#country.form-input-field(type="text", name="country", placeholder="Country")
+      li.form-item
+        //- span.label City
+        input#city.form-input-field(type="text", name="city", placeholder="City")
+      li.form-item
+        //- span.label Category
+        select#category.form-input-field(name="category")
+          option(value="" disabled selected) Category
+          option(value="communication") Communications styles and rules
+          option(value="socialroles") Social roles
+          option(value="courtship") Courtship
+      li.form-item
+        //- span.label Perspective
+        select#perspective.form-input-field(name="perspective")
+          option(value="" disabled selected) Perspective
+          option(value="insider") Insider
+          option(value="outsider") Outsider
+      li.form-item
+        //- span.label Title
+        input#title.form-input-field(type="text", name="title", placeholder="Title")
+      li.form-item
+        //- span.label Your Experience
+        textarea.form-input-field(name="Experience", cols="40", rows="5", placeholder="Your Experience")
+
+      li.form-item
+        input#submit(type="submit", value="Submit")
