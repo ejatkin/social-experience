@@ -6,9 +6,6 @@ var index = require('./routes/index');
 var stories = require('./routes/stories');
 var http = require('http')
 
-var category = require('./models/category')
-var story = require('./models/story')
-
 var app = express();
 
 var db
