@@ -7,16 +7,16 @@ html
     #navbar
       if(path.includes("new"))
         #nav-explore-passive
-          a.navitem(href='/stories') EXPLORE
+          a.navitem-passive(href='/stories') EXPLORE
       else
         #nav-explore-active
-          a.navitem(href='/stories') EXPLORE
+          a.navitem-active(href='/stories') EXPLORE
 
       if(path.includes("new"))
         #nav-contribute-active
-          a.navitem(href='/stories/new') CONTRIBUTE
+          a.navitem-active(href='/stories/new') CONTRIBUTE
       else
         #nav-contribute-passive
-          a.navitem(href='/stories/new') CONTRIBUTE
+          a.navitem-passive(href='/stories/new') CONTRIBUTE
 
     block content
