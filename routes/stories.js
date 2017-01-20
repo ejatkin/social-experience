@@ -16,17 +16,17 @@ MongoClient.connect('mongodb://socialexperience:Makers@ds117929.mlab.com:17929/s
 router.get('/', function (req, res, next) {
   db.collection('stories').find().toArray((err, result) => {
     if (err) return console.log(err)
-    res.render('stories/index', { title: 'Social Experience' , stories: result });
+    res.render('stories/index', { title: 'Social Experience' , stories: result, path: req.path });
   });
 });
 
-router.get('/new', function(request, result, next){
-  result.render('stories/new', { title: 'Social Experience'});
+router.get('/new', function(req, res, next){
+  res.render('stories/new', { title: 'Social Experience', path: req.path});
   // result.send('this is a form for new stories');
 });
 
-router.get('/:id', function(request, result, next){
-  result.render('stories/view', {storyId: request.params.id})
+router.get('/:id', function(req, res, next){
+  res.render('stories/view', {storyId: request.params.id, path: req.path })
   // result.send('this is a display page for a story with id: ' + request.params.id )
 });
 

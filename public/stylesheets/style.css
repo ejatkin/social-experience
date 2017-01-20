@@ -8,7 +8,7 @@ a {
   color: #00B7FF;
 }
 
-#nav-explore, #nav-contribute {
+#nav-explore-passive, #nav-explore-active, #nav-contribute-passive, #nav-contribute-active {
   display: inline;
   padding-left: 5%;
   padding-right: 5%;
