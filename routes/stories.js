@@ -26,7 +26,7 @@ router.get('/new', function(req, res, next){
 });
 
 router.get('/:id', function(req, res, next){
-  res.render('stories/view', {storyId: request.params.id, path: req.path })
+  res.render('stories/view', { path: req.path, storyId: req.params.id })
   // result.send('this is a display page for a story with id: ' + request.params.id )
 });
 
