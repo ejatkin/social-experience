@@ -3,8 +3,10 @@ extends layout
 block content
     each item in stories
       li.story-country= "Country: " + item["country"]
+        
       li.story-category= "Category: " + item["category"]
       li.story-perspective= "Perspective: " + item["perspective"] 
-      li.story-title= "Title: " + item["title"]
+      a(href='stories/#{item["_id"]}')
+        li.story-title= "Title: " + item["title"]
       li.story-content= "Experience: " + item["Experience"]
       p

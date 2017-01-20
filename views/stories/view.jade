@@ -2,3 +2,11 @@ extends layout
 
 block content
   p this is a view page for a story with id: #{storyId}
+  li.story-country= "Country: " + story["country"]
+    
+  li.story-category= "Category: " + story["category"]
+  li.story-perspective= "Perspective: " + story["perspective"] 
+  li.story-title= "Title: " + story["title"]
+  li.story-content= "Experience: " + story["Experience"]
+  
+  

@@ -25,8 +25,12 @@ router.get('/new', function(request, result, next){
   // result.send('this is a form for new stories');
 });
 
-router.get('/:id', function(request, result, next){
-  result.render('stories/view', {storyId: request.params.id})
+router.get('/:id', function(req, res, next){
+  var ObjectId = require('mongodb').ObjectId
+  db.collection('stories').find({ _id : ObjectId(`${req.params.id}`) }).toArray((err,result) => {
+    if (err) return console.log(err)
+    res.render('stories/view', {story: result[0] });
+  });
   // result.send('this is a display page for a story with id: ' + request.params.id )
 });
 
@@ -37,7 +41,6 @@ router.post('/',function(req, res, next){
     if (err) return console.log(err);
 
     console.log('saved to database');
-    console.log(result);
     res.redirect('/');
   });
 });
