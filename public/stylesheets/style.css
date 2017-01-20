@@ -4,6 +4,11 @@ body {
   text-align: center;
 }
 
+
+#subheader {
+  padding-bottom: 2%;
+}
+
 #nav-explore-passive, #nav-explore-active, #nav-contribute-passive, #nav-contribute-active {
   display: inline;
   padding-left: 5%;
@@ -87,4 +92,9 @@ a.navitem-passive:link, a.navitem-passive:visited, a.navitem-passive:hover, a.na
 
 .story:last-child {
   border: none;
+}
+
+.story-title {
+  font-weight: bold;
+  font-size: 15px;
 }
