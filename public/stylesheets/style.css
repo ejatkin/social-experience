@@ -101,7 +101,7 @@ a.navitem-passive:link, a.navitem-passive:visited, a.navitem-passive:hover, a.na
 .story {
   padding-top: 10px;
   border-bottom-style: solid;
-  border-bottom-color: #33ccff;
+  border-bottom-color: rgba(0, 96, 128, .5);
 }
 
 .story:last-child {
