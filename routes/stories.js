@@ -26,7 +26,13 @@ router.get('/new', function(req, res, next){
 });
 
 router.get('/:id', function(req, res, next){
-  res.render('stories/view', {storyId: request.params.id, path: req.path })
+  var ObjectId = require('mongodb').ObjectId
+  db.collection('stories').find({_id: ObjectId(`${req.params.id}`)}).toArray((err, result) => {
+    if (err) return console.log(err)
+    console.log(result)
+    res.render('stories/view', { path: req.path, story: result[0]})
+
+  })
   // result.send('this is a display page for a story with id: ' + request.params.id )
 });
 

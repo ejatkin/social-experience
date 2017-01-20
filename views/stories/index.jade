@@ -21,7 +21,8 @@ block content
     div#center
       each item in stories
         div.story
-          li.story-title= "Title: " + item["title"]
+          a(href='stories/#{item["_id"]}')
+            li.story-title= "Title: " + item["title"]
           li.story-country(value=item['country'])= "Country: " + item["country"]
           li.story-category(value=item['category'])= "Category: " + item["category"]
           li.story-perspective= "Perspective: " + item["perspective"]
