@@ -75,6 +75,17 @@ a.navitem-passive:link, a.navitem-passive:visited, a.navitem-passive:hover, a.na
 /*filter*/
 .filter-dropdown {
   width: 100px;
+  margin: 5px;
+}
+
+#see-all {
+  background-color: #006080;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  margin-left: 10px;
 }
 
 #left, #right, #center {
