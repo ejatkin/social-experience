@@ -2,7 +2,7 @@ extends layout
 
 block content
   script(src='/scripts/filter.js')
-  span Filter by:
+  div#filter-dropdown Filter by:
     select#country-filter.filter-dropdown
       option(value="" disabled selected) Country
       -var countries = []
@@ -17,11 +17,14 @@ block content
     form(style='display:inline', action='/stories')
       input(type='submit', value="See All") 
   div#stories
-    each item in stories
-      div.story
-        li.story-country(value=item['country'])= "Country: " + item["country"]
-        li.story-category(value=item['category'])= "Category: " + item["category"]
-        li.story-perspective= "Perspective: " + item["perspective"] 
-        li.story-title= "Title: " + item["title"]
-        li.story-content= "Experience: " + item["Experience"]
-        p
+    div#left
+    div#center
+      each item in stories
+        div.story
+          li.story-country(value=item['country'])= "Country: " + item["country"]
+          li.story-category(value=item['category'])= "Category: " + item["category"]
+          li.story-perspective= "Perspective: " + item["perspective"] 
+          li.story-title= "Title: " + item["title"]
+          li.story-content= "Experience: " + item["Experience"]
+          p
+    div#right
