@@ -1,10 +1,25 @@
 extends layout
 
 block content
+  script(src='/scripts/filter.js')
+  span Filter by:
+    select#country-filter.filter-dropdown
+      option(value="" disabled selected) Country
+      -var countries = []
+      -for (var i = 0; i < stories.length; i++){if (!countries.includes(stories[i]['country'])) {countries.push(stories[i]['country'])}}
+      each country in countries
+        option(value=country) #{country}
+    select#category-filter.filter-dropdown
+      option(value="" disabled selected) Category
+      option(value="communication") Communications styles and rules
+      option(value="socialroles") Social roles
+      option(value="courtship") Courtship
+  div#stories
     each item in stories
-      li.story-country= "Country: " + item["country"]
-      li.story-category= "Category: " + item["category"]
-      li.story-perspective= "Perspective: " + item["perspective"] 
-      li.story-title= "Title: " + item["title"]
-      li.story-content= "Experience: " + item["Experience"]
-      p
+      div.story
+        li.story-country(value=item['country'])= "Country: " + item["country"]
+        li.story-category= "Category: " + item["category"]
+        li.story-perspective= "Perspective: " + item["perspective"] 
+        li.story-title= "Title: " + item["title"]
+        li.story-content= "Experience: " + item["Experience"]
+        p

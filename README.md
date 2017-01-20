@@ -1,4 +1,16 @@
-##Social Experience - a group project for Makers Academy
+#Social Experience
+
+##A group project for Makers Academy
+Social experience is a NodeJS platform for sharing your views on social experiences in various places around the world.
+
+##How to install
+
+* Install NodeJS
+* Clone or fork this rep
+* ```cd``` into the repo
+* Run ```$ npm install``` from the command line
+* Run ```$ npm start``` to start the webpage at http://localhost:3000
+
 
 ###User stories
 
