@@ -68,3 +68,23 @@ a.navitem-passive:link, a.navitem-passive:visited, a.navitem-passive:hover, a.na
 .filter-dropdown {
   width: 100px;
 }
+
+#left, #right, #center {
+  display: inline-block;
+  width: 30%;
+}
+
+#stories {
+  padding-top: 2%;
+  text-align: center;
+}
+
+.story {
+  padding-top: 10px;
+  border-bottom-style: solid;
+  border-bottom-color: #33ccff;
+}
+
+.story:last-child {
+  border: none;
+}
