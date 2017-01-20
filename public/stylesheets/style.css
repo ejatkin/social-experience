@@ -43,3 +43,8 @@ a.navitem:link, a.navitem:visited, a.navitem:hover, a.navitem:active {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
+
+/*filter*/
+.filter-dropdown {
+  width: 100px;
+}
