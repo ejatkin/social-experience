@@ -14,13 +14,19 @@ a {
   padding-right: 5%;
 }
 
+#navbar {
+    margin-bottom: 5%;
+}
+
 a.navitem:link, a.navitem:visited, a.navitem:hover, a.navitem:active {
   font-size: 30px;
   color: #006080;
   text-decoration: none;
 }
 
-/*Forms*/
+.story-title, .story-content, .story-country, .story-category, .story-perspective {
+  list-style: none;
+}
 
 .form {
   list-style-type: none;
