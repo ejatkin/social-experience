@@ -1,12 +1,11 @@
 window.onload = function(){
 
   document.getElementById('country-filter').addEventListener('change', function(changeEvent){
-
-    var country = changeEvent.srcElement.value;
     var stories = document.getElementsByClassName('story');
     for (var i =0; i < stories.length; i++){
       var countryElement = stories[i].firstChild;
-      if (!countryElement.getAttribute('value') ||countryElement.getAttribute('value') !== country){
+      var categoryElement = stories[i].childNodes[1];
+      if (notMatch(countryElement.getAttribute('value'), categoryElement.getAttribute('value').substring(0,6))){
         stories[i].style = 'display:none';
       } else {
         stories[i].style = '';
@@ -15,14 +14,11 @@ window.onload = function(){
   });
 
   document.getElementById('category-filter').addEventListener('change', function(changeEvent){
-
-    var category = changeEvent.srcElement.value.toLowerCase().substring(0,6);
-
     var stories = document.getElementsByClassName('story');
     for (var i = 0; i < stories.length; i++){
-
+      var countryElement = stories[i].firstChild;
       var categoryElement = stories[i].childNodes[1];
-      if (!categoryElement.getAttribute('value') || categoryElement.getAttribute('value').substring(0,6) !== category) {
+      if ( notMatch(countryElement.getAttribute('value'), categoryElement.getAttribute('value').substring(0,6))) {
         stories[i].style = 'display:none';
       } else {
         stories[i].style = '';
@@ -30,4 +26,20 @@ window.onload = function(){
     }
 
   });
+}
+
+notMatch = function(countryElement, categoryElement){
+  var country = document.getElementById('country-filter').value;
+  var category = document.getElementById('category-filter').value.substring(0,6);
+
+  if (country ===  "" && category === categoryElement ){
+    return false;
+  }
+  if (category ===  "" && country === countryElement ){
+    return false;
+  }
+  if (country === countryElement && category === categoryElement){
+    return false;
+  }
+  return true;
 }
