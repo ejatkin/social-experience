@@ -14,10 +14,9 @@ MongoClient.connect('mongodb://socialexperience:Makers@ds117929.mlab.com:17929/s
 });
 
 router.get('/', function (req, res, next) {
-  db.collection('quotes').find().toArray((err, result) => {
+  db.collection('stories').find().toArray((err, result) => {
     if (err) return console.log(err)
-    console.log(result[0])
-    res.render('stories/index', { title: 'Social Experience' , quotes: result});
+    res.render('stories/index', { title: 'Social Experience' , stories: result });
   });
 });
 
