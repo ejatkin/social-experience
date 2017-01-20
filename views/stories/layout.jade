@@ -5,8 +5,18 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     #navbar
-      #nav-explore
-        a.navitem(href='/stories') EXPLORE
-      #nav-contribute
-        a.navitem(href='/stories/new') CONTRIBUTE
+      if(path.includes("new"))
+        #nav-explore-passive
+          a.navitem-passive(href='/stories') EXPLORE
+      else
+        #nav-explore-active
+          a.navitem-active(href='/stories') EXPLORE
+
+      if(path.includes("new"))
+        #nav-contribute-active
+          a.navitem-active(href='/stories/new') CONTRIBUTE
+      else
+        #nav-contribute-passive
+          a.navitem-passive(href='/stories/new') CONTRIBUTE
+
     block content

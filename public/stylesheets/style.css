@@ -4,23 +4,43 @@ body {
   text-align: center;
 }
 
-a {
-  color: #00B7FF;
-}
-
-#nav-explore, #nav-contribute {
+#nav-explore-passive, #nav-explore-active, #nav-contribute-passive, #nav-contribute-active {
   display: inline;
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+
+#nav-explore-active, #nav-explore-passive {
+  border-top-style: solid;
+  border-top-color: #006080;
+  border-left-style: solid;
+  border-left-color: #006080;
+}
+
+#nav-contribute-active, #nav-contribute-passive {
+  border-top-style: solid;
+  border-top-color: #006080;
+  border-right-style: solid;
+  border-right-color: #006080;
+}
+
+#nav-explore-passive, #nav-contribute-passive, a.navitem-passive:link, a.navitem-passive:visited, a.navitem-passive:hover, a.navitem-passive:active {
+  background-color: #006080;
+  color: white;
+}
+
+#nav-explore-active, #nav-contribute-active, a.navitem-active:link, a.navitem-active:visited, a.navitem-active:hover, a.navitem-active:active {
+  color: #006080;
 }
 
 #navbar {
     margin-bottom: 5%;
 }
 
-a.navitem:link, a.navitem:visited, a.navitem:hover, a.navitem:active {
+a.navitem-passive:link, a.navitem-passive:visited, a.navitem-passive:hover, a.navitem-passive:active, a.navitem-active:link, a.navitem-active:visited, a.navitem-active:hover, a.navitem-active:active {
   font-size: 30px;
-  color: #006080;
   text-decoration: none;
 }
 
