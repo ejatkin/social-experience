@@ -2,7 +2,7 @@ extends layout
 
 block content
   script(src='/scripts/filter.js')
-  div#filter-dropdown Filter by:
+  div#filter-dropdown Filter by: 
     select#country-filter.filter-dropdown
       option(value="" disabled selected) Country
       -var countries = []
@@ -15,7 +15,7 @@ block content
       option(value="socialroles") Social roles
       option(value="courtship") Courtship
     form(style='display:inline', action='/stories')
-      input(type='submit', value="See All")
+      input#see-all(type='submit', value="SEE ALL")
   div#stories
     div#left
     div#center
