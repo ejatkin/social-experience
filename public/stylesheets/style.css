@@ -4,6 +4,9 @@ body {
   text-align: center;
 }
 
+#logo {
+  width: 30%;
+}
 
 #subheader {
   padding-bottom: 2%;

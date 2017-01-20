@@ -15,16 +15,16 @@ block content
       option(value="socialroles") Social roles
       option(value="courtship") Courtship
     form(style='display:inline', action='/stories')
-      input(type='submit', value="See All") 
+      input(type='submit', value="See All")
   div#stories
     div#left
     div#center
       each item in stories
         div.story
+          li.story-title= "Title: " + item["title"]
           li.story-country(value=item['country'])= "Country: " + item["country"]
           li.story-category(value=item['category'])= "Category: " + item["category"]
-          li.story-perspective= "Perspective: " + item["perspective"] 
-          li.story-title= "Title: " + item["title"]
+          li.story-perspective= "Perspective: " + item["perspective"]
           li.story-content= "Experience: " + item["Experience"]
           p
     div#right
